@@ -1,10 +1,10 @@
 /*global define*/
 
-define(['backbone', 'text!templates/footer.tpl'], function(Backbone, tpl){
+define(['backbone', 'text!templates/footer.html'], function(Backbone, tpl){
 	'use strict';
 
 	return Backbone.View.extend({
-        'id'        : 'footer'
+        'id'        : 'footer',
 		'tagName'	: 'footer',
 		'initialze'	: function(){
 		},

@@ -8,7 +8,7 @@ require.config({
         'views': 'app/views',
         'templates': 'app/templates',
         'underscore': 'lib/lodash',
-        'bootstrap': 'lib/bootstrap.min',
+        'bootstrap': 'lib/bootstrap',
     },
     'shim': {
         'backbone': {

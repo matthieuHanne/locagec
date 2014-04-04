@@ -1,6 +1,6 @@
 /* Default base view*/
 
-define(['backbone'], function(Backbone){
+define(['backbone', 'bootstrap'], function(Backbone, Bootstrap){
     'use strict';
 
     return Backbone.View.extend({
