@@ -7,15 +7,17 @@ define(['backbone'],function(Backbone) {
 		'config': require.appConfig,
 		'initialize': function(){
 			require(
-				['router', 'views/base'],
-				function(Router, BaseView){
+				['router', 'views/base', 'views/header', 'views/footer'],
+				function(Router, BaseView, HeaderView, FooterView){
 
 					/*Router initialisation*/
 					Router.initialize();
 
 					this.view = new BaseView();
+                    this.view.render( new HeaderView().render(), '#header');
+                    this.view.render( new FooterView().render(), '#footer');
 
-					Backbone.history.start({ pushState: true });
+    				Backbone.history.start({ pushState: true });
 					return this;
 				}.bind(this)
 			);

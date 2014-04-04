@@ -15,7 +15,7 @@ define(['app', 'backbone'], function(App, Backbone) {
 					'contacts': 'contacts',
 				},
 				'index': function(){},
-				'destockage': function(){},
+				'destockage': function(){ console.log('destokage')},
 				'services': function(){},
 				'peinture': function(){},
 				'electricite': function(){},
