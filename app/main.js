@@ -4,6 +4,7 @@ require.config({
     'paths': {
         'backbone': 'lib/backbone-min',
         'app': 'app/app',
+        'router': 'app/router',
         'views': 'app/views',
         'templates': 'app/templates',
         'underscore': 'lib/lodash',
@@ -12,7 +13,7 @@ require.config({
     'shim': {
         'backbone': {
             'deps': [
-                'lib/lodash',
+                'underscore',
                 'lib/jquery.min',
             ],
             'exports': 'Backbone'

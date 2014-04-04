@@ -11,9 +11,9 @@ define(['backbone'],function(Backbone) {
 				function(Router, BaseView){
 
 					/*Router initialisation*/
-					DefaultRouter.initialize();
+					Router.initialize();
 
-					this.view = new BaseView($('#main'));
+					this.view = new BaseView();
 
 					Backbone.history.start({ pushState: true });
 					return this;
