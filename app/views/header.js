@@ -1,11 +1,11 @@
 /*global define*/
 
-define(['backbone', 'text!templates/header.html'], function(Backbone, tpl){
+define(['backbone', 'text!tpl/header.html'], function(Backbone, tpl){
 	'use strict';
 
 	return Backbone.View.extend({
-        'id'        : 'header',
-		'tagName'	: 'header',
+        'id'        : 'nav',
+		'tagName'	: 'div',
 		'className'	: 'navbar-wrapper',
 		'initialze'	: function(){
 		},

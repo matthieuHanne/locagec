@@ -14,7 +14,12 @@ define(['app', 'backbone'], function(App, Backbone) {
 					'diaspora': 'diaspora',
 					'contacts': 'contacts',
 				},
-				'index': function(){},
+				'index': function(){
+                    require(['views/home'],function(HomeView){
+                        App.view.render((new HomeView()).renderCarousel(), '#container');
+                        App.view.render((new HomeView()).renderMarket(), '#container');
+                    });
+                },
 				'destockage': function(){ console.log('destokage')},
 				'services': function(){},
 				'peinture': function(){},

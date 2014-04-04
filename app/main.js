@@ -6,9 +6,10 @@ require.config({
         'app': 'app/app',
         'router': 'app/router',
         'views': 'app/views',
-        'templates': 'app/templates',
+        'tpl': 'app/templates',
         'underscore': 'lib/lodash',
         'bootstrap': 'lib/bootstrap',
+        'holder': 'lib/holder',
     },
     'shim': {
         'backbone': {
