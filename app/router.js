@@ -16,8 +16,10 @@ define(['app', 'backbone'], function(App, Backbone) {
 				},
 				'index': function(){
                     require(['views/home'],function(HomeView){
+                        /*
                         App.view.render((new HomeView()).renderCarousel(), '#container');
                         App.view.render((new HomeView()).renderMarket(), '#container');
+                        */
                     });
                 },
 				'destockage': function(){ console.log('destokage')},
