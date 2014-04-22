@@ -1,9 +1,9 @@
-/*global define*/
+/*global define Leaf View*/
 define(['backbone'],
 function(Backbone){
 	'use strict';
 
-		var view = Backbone.View.extend({
+	var view = Backbone.View.extend({
 		'tagName'	: 'section',
 		'initialze'	: function(){
 		},
@@ -11,24 +11,43 @@ function(Backbone){
 			this.$el.html(_.template(tpl)); 
 			return this;
 		},
-		/*
-		'renderCarousel': function(){
-            this.id = 'home';
-			this.$el.html(_.template(tplCarousel));
-			return this;
+		'events': {
+			'click .add-keyword'	: 'addKeywordRow',
+			'click .start-search' 	: 'startSearch',
+			'click .start-crawl'	: 'startCrawl',
 		},
-		'renderMarket': function(){
-            this.$el.addClass('marketing').addClass('container')
-			this.$el.html(_.template(tplMarket));
-			return this;
+		'addKeywordRow' : function(event){
+			$('.col-xs-3:first-child').clone().appendTo('.keywords');
 		},
-		'renderRows': function(){
-            this.id = 'rows';
-			this.$el.html(_.template(tplRows));
-			return this;
-		}
-		*/
+		'startSearch' : function(event){
+			//TODO: Alert
+			//Request to API
+			var requestData;
+			$.post(App.config.apiUrl+'/search',requestData)
+				.done(function(responseData){
+					alert(ResponseData)
+					App.Router.navigate('dashboard', {trigger: true})
+				})
+				.fail(function() {
+				    alert( " Post failed" );
+					App.Router.navigate('dashboard', {trigger: true})
+				});
+		},
+		'startCrawl' : function(event){
+			//TODO: Alert
+			//Request to API
+			var requestData;
+			$.post(App.config.apiUrl+'/crawl',requestData)
+				.done(function(responseData){
+					alert(ResponseData)
+					App.Router.navigate('dashboard', {trigger: true})
+				})
+				.fail(function() {
+				    alert( "Post failed" );
+					App.Router.navigate('dashboard', {trigger: true})
+				});
+		},
 	});
 
-	return new view();
+	return view;
 });

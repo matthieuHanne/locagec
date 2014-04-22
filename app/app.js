@@ -7,11 +7,11 @@ define(['backbone'],function(Backbone) {
 		'config': require.appConfig,
 		'initialize': function(){
 			require(
-				['router','views/root','views/base', 'views/header', 'views/footer'],
-				function(Router, routeView, BaseView, HeaderView, FooterView){
+				['router','views/base', 'views/leaf'],
+				function(Router, BaseView, LeafView){
 
 					/*Router initialisation*/
-					Router.initialize();
+					this.Router = Router;
 
 					this.view = new BaseView();
                     //this.view.render(routeView, '#depth-1');
