@@ -1,0 +1,14 @@
+{
+	"name": "Locagec",
+	"version": "1.0.0",
+	"dependencies": {
+	"jquery": "latest",
+	"requirejs": "latest",
+	"backbone-amd": "latest",
+	"underscore-amd": "latest",
+	"text": "latest",
+	"bootstrap": "latest",
+	"superslides": "latest",
+	"smoothscroll": "latest"
+	}
+}
